@@ -1,0 +1,9 @@
+services:
+  quote-api:
+    environment:
+      QUOTE_FAILURE_RATE: "1"
+      QUOTE_SLOW_RATE: "0"
+  agent:
+    environment:
+      APP_ENV: development
+      LANGUAGE_PROVIDER: fake

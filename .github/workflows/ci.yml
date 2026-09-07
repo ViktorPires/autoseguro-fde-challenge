@@ -1,0 +1,31 @@
+name: required-checks
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned dependency tool
+        run: python -m pip install uv==0.8.22
+      - name: Frozen dependencies
+        run: uv sync --project agent-service --frozen
+      - name: Lint and format
+        run: |
+          uv run --project agent-service --frozen ruff check agent-service scripts/container-smoke.py scripts/evaluate.py
+          uv run --project agent-service --frozen ruff format --check agent-service scripts/container-smoke.py scripts/evaluate.py
+      - name: Unit, SQLite, HTTP faults and real-service integration
+        working-directory: agent-service
+        env:
+          TZ: UTC
+        run: uv run --frozen python -m pytest -q
+      - name: Offline extraction evaluation
+        run: uv run --project agent-service --frozen python scripts/evaluate.py
+      - name: Build both images
+        run: docker compose --env-file config/development.env.example build
+      - name: Container success and restart smoke
+        run: python scripts/container-smoke.py
+      - name: Deterministic failure and restart smoke
+        run: python scripts/container-smoke.py --failure

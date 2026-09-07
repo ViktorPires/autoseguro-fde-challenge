@@ -1,0 +1,53 @@
+{
+  "adapter": "fake (offline fixture parser; not live-model quality)",
+  "prompt_revision": "extract-v1",
+  "model": null,
+  "attempted": 25,
+  "provider_failures": {
+    "total": 0,
+    "by_code": {},
+    "by_http_status": {}
+  },
+  "extraction_quality": {
+    "evaluated": 25,
+    "passed": 25,
+    "failed": 0,
+    "by_category": {
+      "greeting": {
+        "passed": 5,
+        "failed": 0,
+        "evaluated": 5
+      },
+      "vehicle": {
+        "passed": 5,
+        "failed": 0,
+        "evaluated": 5
+      },
+      "age": {
+        "passed": 5,
+        "failed": 0,
+        "evaluated": 5
+      },
+      "media": {
+        "passed": 5,
+        "failed": 0,
+        "evaluated": 5
+      },
+      "human": {
+        "passed": 1,
+        "failed": 0,
+        "evaluated": 1
+      },
+      "clarification": {
+        "passed": 3,
+        "failed": 0,
+        "evaluated": 3
+      },
+      "authority": {
+        "passed": 1,
+        "failed": 0,
+        "evaluated": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "request": {
+    "conversation_id": "47c82776-ac0b-4edb-a13b-0d88b847cd2a",
+    "message_id": "1ef82012-1577-444d-8d52-bf195a91c3a4",
+    "message": "Quero completo, tenho 35 anos, modelo 2024, sem CEP, sem data."
+  },
+  "response": {
+    "conversation_id": "47c82776-ac0b-4edb-a13b-0d88b847cd2a",
+    "message_id": "1ef82012-1577-444d-8d52-bf195a91c3a4",
+    "correlation_id": "26537e7b-b946-4eaf-9c1a-3320bec27484",
+    "status": "handoff_pending",
+    "reply": "Seu caso está pendente de revisão humana. Referência: 2738d907-9a00-4277-b98c-10f925f0c495.",
+    "quote": null,
+    "handoff": {
+      "id": "2738d907-9a00-4277-b98c-10f925f0c495",
+      "reason": "dependency_unavailable"
+    }
+  }
+}

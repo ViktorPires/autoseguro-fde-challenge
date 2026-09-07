@@ -1,0 +1,38 @@
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.uv/
+*.egg-info/
+
+# env / secrets
+.env
+.env.*
+*.key
+*.pem
+
+# OS / editores
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+#Transparência de uso de IA
+!ai-logs/**
+
+# Sanitized live production evidence
+!evidence/live-production-agent.log
+
+# Local tools, durable state, and private exports
+.tooling/
+.uv-cache/
+*.sqlite3*
+*.db*
+agent-service/data/
+*.private.jsonl
+.pytest_cache/
+.ruff_cache/
+.chat-ids.json
