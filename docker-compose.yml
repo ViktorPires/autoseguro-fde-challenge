@@ -1,0 +1,45 @@
+services:
+  quote-api:
+    build: ./quote-service
+    environment:
+      TZ: UTC
+      QUOTE_FAILURE_RATE: "0.20"
+      QUOTE_SLOW_RATE: "0.10"
+      QUOTE_SLOW_SECONDS: "8"
+    # The supplied image is unchanged; its read-only app needs no root privileges.
+    user: "10001:10001"
+    restart: unless-stopped
+  agent:
+    build:
+      context: ./agent-service
+      args:
+        APP_VERSION: "1.0.0"
+    labels:
+      org.opencontainers.image.title: autoseguro-agent
+      org.opencontainers.image.version: "1.0.0"
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      TZ: UTC
+      APP_ENV: "${APP_ENV:-development}"
+      LANGUAGE_PROVIDER: "${LANGUAGE_PROVIDER:-fake}"
+      LANGUAGE_MODEL: "${LANGUAGE_MODEL:-gemini-3.8-flash}"
+      LLM_DEADLINE: "${LLM_DEADLINE:-30}"
+      QUOTE_DEADLINE: "${QUOTE_DEADLINE:-39}"
+      TURN_DEADLINE: "${TURN_DEADLINE:-40}"
+      FINALIZATION_RESERVE: "${FINALIZATION_RESERVE:-1}"
+      PROVIDER_SECRET: "${PROVIDER_SECRET:-}"
+      HMAC_SECRET: "${HMAC_SECRET:?Set a stable HMAC_SECRET of at least 32 characters}"
+      QUOTE_URL: http://quote-api:8000
+      SQLITE_PATH: /data/agent.sqlite3
+      APP_VERSION: "1.0.0"
+      GIT_SHA: "${GIT_SHA:-unknown}"
+    volumes:
+      - agent-data:/data
+    depends_on:
+      - quote-api
+    init: true
+    stop_grace_period: 45s
+    restart: unless-stopped
+volumes:
+  agent-data:

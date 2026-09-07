@@ -1,0 +1,45 @@
+{
+  "request": {
+    "conversation_id": "89c8351d-a960-423c-b75b-96c12e8117c2",
+    "message_id": "7d8fd5a6-5945-4bd2-8841-331ca458c1f1",
+    "message": "Quero completo, tenho 35 anos, modelo 2024, sem CEP, sem data."
+  },
+  "response": {
+    "conversation_id": "89c8351d-a960-423c-b75b-96c12e8117c2",
+    "message_id": "7d8fd5a6-5945-4bd2-8841-331ca458c1f1",
+    "correlation_id": "cd0837e9-1ae6-4957-854f-22d00512786a",
+    "status": "quoted",
+    "reply": "Plano Completo: mensalidade R$ 209,90; franquia R$ 3000,00. Coberturas: colisao, roubo, furto, terceiros, vidros. Carência: 30 dias para roubo, furto. A carência é contada da data de início. Sem CEP, não foi aplicado ajuste por CEP. Sem data, não foi calculado o primeiro pagamento proporcional. Esta é uma cotação, sujeita a atualização; não emite apólice nem ativa cobertura.",
+    "quote": {
+      "id": "e6ab43f6-d516-4051-8c46-ef02ecb7bab8",
+      "created_at": "2026-09-07T15:57:17.855631+00:00",
+      "plano_id": "completo",
+      "plano_nome": "Completo",
+      "premio_mensal": "209.9",
+      "franquia": "3000",
+      "coberturas": [
+        "colisao",
+        "roubo",
+        "furto",
+        "terceiros",
+        "vidros"
+      ],
+      "multiplicadores": {
+        "faixa_etaria": "1.0",
+        "idade_veiculo": "1.0",
+        "regiao": "1.0"
+      },
+      "carencia": {
+        "coberturas": [
+          "roubo",
+          "furto"
+        ],
+        "dias": 30,
+        "observacao": "Coberturas de roubo e furto so passam a valer apos a carencia, contada da data de inicio da vigencia."
+      },
+      "moeda": "BRL",
+      "primeiro_pagamento_pro_rata": null
+    },
+    "handoff": null
+  }
+}

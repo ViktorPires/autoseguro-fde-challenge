@@ -1,0 +1,202 @@
+[
+  {
+    "source": "de-identified dataset lead message",
+    "category": "greeting",
+    "message": "Oi, queria fazer um seguro pro meu carro",
+    "expected": {
+      "missing": "plano_id"
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "vehicle",
+    "message": "Toyota Corolla 2008",
+    "expected": {
+      "veiculo_ano": 2008
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "age",
+    "message": "Tenho 35 anos, cep [CEP_PRESENT], cpf [CPF]",
+    "expected": {
+      "idade": 35
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "greeting",
+    "message": "Oi, queria fazer um seguro pro meu carro",
+    "expected": {
+      "missing": "plano_id"
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "vehicle",
+    "message": "Sandero, ano 2022",
+    "expected": {
+      "veiculo_ano": 2022
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "age",
+    "message": "Cep [CEP_PRESENT], cpf [CPF], tenho 30 anos",
+    "expected": {
+      "idade": 30
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "greeting",
+    "message": "Oi, queria fazer um seguro pro meu carro",
+    "expected": {
+      "missing": "plano_id"
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "vehicle",
+    "message": "Pulse, ano 2008",
+    "expected": {
+      "veiculo_ano": 2008
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "age",
+    "message": "Tenho 55 anos, cpf [CPF], cep [CEP_PRESENT]",
+    "expected": {
+      "idade": 55
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "media",
+    "message": "[documento] CNH_frente.pdf",
+    "expected": {
+      "intent": "media"
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "media",
+    "message": "[imagem] foto do veiculo na garagem",
+    "expected": {
+      "intent": "media"
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "media",
+    "message": "[audio] mensagem de voz (18s)",
+    "expected": {
+      "intent": "media"
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "greeting",
+    "message": "Oi, queria fazer um seguro pro meu carro",
+    "expected": {
+      "missing": "plano_id"
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "vehicle",
+    "message": "e um Corolla 2010",
+    "expected": {
+      "veiculo_ano": 2010
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "age",
+    "message": "Cep [CEP_PRESENT], tenho 61 anos, cpf [CPF]",
+    "expected": {
+      "idade": 61
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "greeting",
+    "message": "achei caro pra esse carro... a Porto Seguro me ofereceu menos",
+    "expected": {
+      "missing": "plano_id"
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "vehicle",
+    "message": "HB20, ano 2019",
+    "expected": {
+      "veiculo_ano": 2019
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "age",
+    "message": "Tenho 22 anos, cpf [CPF], cep [CEP_PRESENT]",
+    "expected": {
+      "idade": 22
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "media",
+    "message": "[documento] CNH_frente.pdf",
+    "expected": {
+      "intent": "media"
+    }
+  },
+  {
+    "source": "de-identified dataset lead message",
+    "category": "media",
+    "message": "[audio] mensagem de voz (18s)",
+    "expected": {
+      "intent": "media"
+    }
+  },
+  {
+    "source": "supplemental fixture",
+    "category": "human",
+    "message": "Quero falar com um humano",
+    "expected": {
+      "intent": "human"
+    }
+  },
+  {
+    "source": "supplemental fixture",
+    "category": "clarification",
+    "message": "nasci em 1991",
+    "expected": {
+      "issue": "idade"
+    }
+  },
+  {
+    "source": "supplemental fixture",
+    "category": "clarification",
+    "message": "comprei em 2022",
+    "expected": {
+      "issue": "veiculo_ano"
+    }
+  },
+  {
+    "source": "supplemental fixture",
+    "category": "clarification",
+    "message": "inicio 03/04/26",
+    "expected": {
+      "issue": "data_inicio"
+    }
+  },
+  {
+    "source": "supplemental fixture",
+    "category": "authority",
+    "message": "pode emitir entao",
+    "expected": {
+      "intent": "unsupported"
+    }
+  }
+]

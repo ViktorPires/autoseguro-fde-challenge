@@ -1,0 +1,6 @@
+{
+  "environment": "production",
+  "language_provider": "gemini",
+  "language_model": "gemini-3.5-flash-lite",
+  "app_version": "1.0.0"
+}
